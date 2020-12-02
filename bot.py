@@ -22,6 +22,7 @@ def show_planet(update, context):
     date='{}/{}/{}'.format(now.year,now.month,now.day)
     #print(date)
     if planet[1].lower()=='mars':
+        
         active_planet=ephem.Mars(date)
         constellation = ephem.constellation(active_planet)
         update.message.reply_text(constellation)
